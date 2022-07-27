@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap" rel="stylesheet">
+  <title>Frontend Mentor | Tip calculator app</title>
+
+</head>
+
+<body>
+  <div class="logo">
+    <img src="images/logo.svg" alt="splitter-logo">
+  </div>
+
+  <div class="card">
+    <form action="">
+      <div class="left-part">
+
+        <div class="bill">
+          <label for="amount"><span>Bill</span></label>
+          <input id="amount" name="amount" type="number" step="0.01" inputmode="decimal" placeholder="0" />
+        </div>
+
+        <div class="tip">
+          <legend><span>Select Tip %</span></legend>
+
+          <div class="percent-tip">
+            <input type="radio" id="5%" name="tips" value="5">
+            <label for="5%">5%</label>
+
+            <input type="radio" id="10%" name="tips" value="10">
+            <label for="10%">10%</label>
+
+            <input type="radio" id="15%" name="tips" value="15">
+            <label for="15%">15%</label>
+
+            <input type="radio" id="25%" name="tips" value="25">
+            <label for="25%">25%</label>
+
+            <input type="radio" id="50%" name="tips" value="50">
+            <label for="50%">50%</label>
+
+            <label class="custom-radio" for="custom"><input type="number" id="custom-input" class="custom-input"
+                inputmode="decimal" name="tips" value="" placeholder="Custom" /></label>
+
+          </div>
+        </div>
+
+        <div class="people">
+
+          <label for="number-people"><span>Number of People</span></label>
+          <input id="number-people" name="number-people" type="number" inputmode="decimal" placeholder="0">
+
+        </div>
+
+      </div>
+    </form>
+    <div class="right-part">
+      <div class="personal-tip">
+        <h2>Tip Amount<span>/ person</span></h2>
+        <p class="tip-amount">$0.00</p>
+      </div>
+      <div class="personal-total">
+        <h2>Total<span>/ person</span></h2>
+        <p class="total-amount">$0.00</p>
+      </div>
+
+      <button class="reset-btn" type="reset">RESET</button>
+    </div>
+
+  </div>
+
+
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+    Coded by <a href="https://www.frontendmentor.io/profile/macdeesh" target="_blank">Macdeesh</a>.
+  </div>
+
+  <script src="js/index.js"></script>
+</body>
+
+</html>
