@@ -196,6 +196,7 @@ input:focus::placeholder {
     box-sizing: border-box;
     font-size: 2.5rem;
     color: var(--Strong-cyan);
+    overflow-x: scroll;
 }
 
 .right-part span {
