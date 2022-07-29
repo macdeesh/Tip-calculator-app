@@ -14,15 +14,15 @@ var inputClient;
 var percent;
 
 billAmount.addEventListener("input", function () {
-  theAmount = Number(billAmount.value);
+  theAmount = Number(billAmount.value);//convert the values entered to a number instead of string
   if (percent > 0)
-    btnClass.classList.add("ready");
+    btnClass.classList.add("ready");// this activate the reset button by adding a class that makes it visible and active for clicking
   calculationTips();
 });
 
 customInput.addEventListener("click", function () {
   for (let i = 0; i < radios.length; i++)
-    radios[i].checked = false;
+    radios[i].checked = false;// this to cancel the radio inputs when the custom input is choosen
   percent = Number(customInput.value);
   calculationTips();
 });
@@ -34,12 +34,12 @@ customInput.addEventListener("input", function () {
 
 
 for (let i = 0; i < selectionTips.length; i++) {
-  selectionTips[i].addEventListener("change", function () {
+  selectionTips[i].addEventListener("change", function () { // for every change happening in the radio inputs a new value is taken.
     percent = Number(selectionTips[i].value);
     if (theAmount > 0)
       btnClass.classList.add("ready");
     if (theAmount > 0 && percent != undefined && (inputClient == undefined || inputClient == false)) {
-      errorMsg.add("peopleSpan");
+      errorMsg.add("peopleSpan");// add the error message when the number of clients is undefined or 0
     } else
       calculationTips();
   });
@@ -63,12 +63,12 @@ function calculationTips() {
   }
 }
 
-function formatAmount(money, option) {
+function formatAmount(money, option) { // this add dollar sign and convert the output the 2 decimals exemple: $ 1.00
   let formattedAmount = new Intl.NumberFormat("en-US", { style: 'currency', currency: 'USD' });
   return document.querySelector(option).innerHTML = formattedAmount.format(money);
 }
 
-btnClass.addEventListener("click", function () {
+btnClass.addEventListener("click", function () { // clearing all values and restting the form
   if (btnTrue.contains("ready")) {
     numberClient.value = "";
     customInput.value = "";
